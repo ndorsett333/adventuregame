@@ -26,6 +26,8 @@ draw_map()
 
 draw_player()
 
+if(btn(❎)) show_inventory()
+
 end
 -->8
 --map
@@ -141,6 +143,21 @@ function interact(x,y)
 	
 	end
 
+end
+-->8
+--inventory
+
+function show_inventory()
+
+	invx=mapx*8+40
+	invy=mapy*8+8
+	
+	rectfill(invx,invy,invx+48,invy+24,0)
+	
+	print("inventory",invx+7,invy+4,7)
+	
+	print("keys "..p.keys,invx+12,invy+14,9)
+	
 end
 __gfx__
 00000000333333333333333333300333111111111111111111111111666666666666666665555655000000000000000000000000000000000000000000000000
